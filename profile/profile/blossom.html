@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>프로필카드</title>
+    <link rel="stylesheet" href="./profile card.css">
+    <script src="https://kit.fontawesome.com/2bc72b9b74.js" crossorigin="anonymous"></script>
+    <style>
+        
+    </style>
+</head>
+<body id="body1">
+    
+    <section class="wrapper" id="wrapper1">
+        <nav class="meun"><i class="fa-solid fa-bars"></i><i class="fa-solid fa-envelope"></i></nav>
+        <article class="profile">
+            <img src="./블로썸.png" width="200" height="200" alt="블로썸이미지" id="img1" >
+            <p>블로썸(Blossom) <br>
+            파워퍼프걸 멤버 리더</p>
+            <button type="button" class="v v1" id="btn1" >View larger</button>
+            
+        </article>
+        <ul class="content">
+            <li><a href="#"><i class="fa-brands fa-facebook" style="color: #e665b0;">visit my pacebook page</i></a></li><br>
+            <li><a href="#"><i class="fa-brands fa-instagram" style="color: #e665b0;">visit my instagram page</i></a></li>
+        </ul>
+        <!-- <nav class="other"> 원래있던 코드 
+            <a href="./blossom.html"><button type="button" class="last last_button1" ></button></a>
+            <a href="./butercup.html"><button type="button" class="last last_button2" ></button></a>
+            <a href="./bubble.html"><button type="button" class="last last_button3"></button></a>
+            <a href="./doctor.html"><button type="button" class="last last_button4" ></button></a>
+        </nav>  -->
+        <nav class="other">
+            <button type="button" class="last last_button1" ></button>
+            <button type="button" class="last last_button2" ></button>
+            <button type="button" class="last last_button3"></button>
+            <button type="button" class="last last_button4" ></button>
+        </nav>  
+    </section>
+
+    <script>
+        let img_link = document.querySelectorAll('.other > button');
+        let obj_list = [
+            { name: 'blossom', img :"./블로썸.png" },
+            { name: 'butercup', img : "./버터컵.png" },
+            { name: 'bubble', img : "./버블쓰.png" },
+            { name: 'doctor', img : "./박사님.png" },
+        ]
+        for (let i = 0; i < img_link.length; i++) {
+            img_link[i].onclick = function() {
+                document.body.id = `body${i + 1}`;
+
+                let name = document.querySelector('article.profile p');
+                let img = document.querySelector('article.profile img');
+                name.innerText = obj_list[i].name;
+                img.src = obj_list[i].img;
+                
+                for (const elem of img_link) {
+                    console.log(elem, img_link[i]);
+                    if(elem === img_link[i]) {
+                        elem.classList.add('on');
+                    } else {
+                            elem.classList.remove('on');
+                        }
+                }
+            }
+        }
+        //view larger 버튼을 누르면 이미지가 커집니다.
+        //변수지정
+        let btn1 = document.getElementById('btn1');
+        let img1 = document.getElementById('img1');
+        //이벤트에 실행될 함수 등록
+        btn1.addEventListener('click', handlebuttonclick);
+        img1.addEventListener('click', handleimgclick);
+        //실행된함수 내용
+        //Q-1 : img1는 blossom 이미지에만 지정한 id함수인데도 다른 이미지에도 지정되는 이유가궁금합니다.
+        function handlebuttonclick() {
+        img1.style.transform = 'scale(1.5)';
+        img1.style.border = '10px solid #e665b0';
+    }
+        //Q-2 : 버튼을 한번더 누르면 이미지가 원래대로 돌아가게 하고싶은데 방법을 몰라사
+        //일단 이미지를 누르면 원래대로 돌아가게했는데 방법이 있을까요
+        function handleimgclick() {
+        img1.style.transform = 'none';
+        img1.style.border = 'none'; 
+    }
+</script>
+</body>
+</html>
