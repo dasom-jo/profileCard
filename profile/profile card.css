@@ -1,0 +1,366 @@
+:root {
+    --profile-Blossom-color: #e665b0;
+    --profile-butercup-color: #36ba45;
+    --profile-bubble-color: #74C0FC;
+    --profile-doctor-color: #000000;
+    --profile-main-char-color: #FFF;
+    --profile-bg-color: rgb(187, 172, 201);
+}
+
+
+@keyframes change1 {
+    from {border: 100px solid#e665b0;
+
+    }
+    to {border: 1px solid white;
+        background-color: pink;
+        border-radius: 50%;
+    }
+}
+
+@keyframes change2 {
+    from {border: 100px solid#36ba45;
+
+    }
+    to {border: 1px solid white;
+        background-color: pink;
+        border-radius: 50%;
+    }
+}
+
+@keyframes change3 {
+    from {border: 100px solid#74C0FC;
+
+    }
+    to {border: 1px solid white;
+        background-color: pink;
+        border-radius: 50%;
+    }
+}
+
+@keyframes change4 {
+    from {border: 100px solid#000000;
+
+    }
+    to {border: 1px solid white;
+        background-color: pink;
+        border-radius: 50%;
+    }
+}
+
+
+@font-face {
+    font-family: 'omyu_pretty';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-01@1.0/omyu_pretty.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    font-family: 'omyu_pretty';
+    border-radius: 3%;
+}
+
+body{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    width:100%;
+}
+
+body#body1 {
+    background-color: #ebcadc;
+    width:100%;
+    height:100%;
+    perspective:500px;
+    width: auto;
+    transform-style: preserve-3d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapper {
+    text-align: center;
+    margin: auto;
+    transition: 0.3s;
+    box-shadow: 0 10px 50px gray;
+    height: 300px;
+    background: white;
+    border: 1px solid rgba(0,0,0,0.1);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 300px;
+    height: 500px;
+    transform: translate(-50%, -50%);
+}
+/* 블로섬 */
+.wrapper:nth-of-type(1) {
+    transform: translate(calc(-30% * 5.1),20%) translateZ(-100px);
+}
+/* 버터 */
+.wrapper:nth-of-type(2) {
+    transform: translate(calc(-30% * 4.1), 20%) translateZ(-75px);
+}
+/* 버블 */
+.wrapper:nth-of-type(3) {
+    transform: translate(calc(-30% * 3.1), 20%) translateZ(-50px);
+}
+/* 박사 */
+.wrapper:nth-of-type(4) {
+    transform: translate(calc(30% * 0.1), 20%) translateZ(-75px);
+}
+/* 모조 */
+.wrapper:nth-of-type(5) {
+    transform: translate(calc(-30% * 0.9), 20%) translateZ(-50px);
+}
+/* 퍼지 */
+.wrapper:nth-of-type(6) {
+    transform: translate(calc(-30% * 2.1), 20%) translateZ(-25px);
+}
+
+#wrapper1 {
+    --profile-main-char-color: var(--profile-Blossom-color);
+}
+
+#wrapper2{
+    --profile-main-char-color: var(--profile-butercup-color);
+}
+
+#wrapper3{
+    --profile-main-char-color: var(--profile-bubble-color);
+}
+
+#wrapper4{
+    --profile-main-char-color: var(--profile-doctor-color);
+}
+
+#wrapper5{
+    --profile-main-char-color: var(--profile-doctor-color);
+}
+
+#wrapper6{
+    --profile-main-char-color: var(--profile-doctor-color);
+}
+
+.meun {
+    border: 1px solid white;
+    margin: 10px;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+}
+
+img {
+    border-radius: 50%;
+    width: 200px;
+    box-shadow: 1px 1px 1px black;
+    height: 200px;
+    margin: 20px;
+    margin-top: 30px;
+}
+
+.profile{
+    background-color: white;
+}
+
+p {
+    background-color: white;
+    margin: 3px;
+    font-size: 20px;
+
+}
+
+.content {
+    background-color: white;
+    padding: 0;
+    line-height: 10px;
+    list-style: none;
+    font-size: 20px;
+}
+
+
+.v {
+    padding: 8px 20px; /* 내부 여백 설정 */
+border: none; /* 테두리 제거 */
+border-radius: 10px; /* 버튼 모서리를 둥글게 만듭니다. */
+color: #fff; /* 텍스트 색상 설정 */
+font-size: 16px; /* 폰트 크기 설정 */
+cursor: pointer;
+box-shadow: 1px 1px 3px black;
+margin: 10px;
+}
+
+.v1 {
+    background-color: var(--profile-Blossom-color);
+}
+
+.v2 {
+    background-color: var(--profile-butercup-color);
+}
+.v3 {
+    background-color: var(--profile-bubble-color);
+}
+.v4 {
+    background-color: var(--profile-doctor-color);
+}
+
+.v:hover {
+        transform: scale(1.5, 1.5);
+        /* 하나만 쓰면 엑스값와이값 다 먹음 */
+}
+
+#img1{
+animation: change1 0.5s linear 1 alternate;
+}
+
+#img2{
+    animation: change2 0.5s linear 1 alternate;
+}
+
+#img3{
+        animation: change3 0.5s linear 1 alternate;
+}
+#img4{
+    animation: change4 0.5s linear 1 alternate;
+    }
+#img5{
+    animation: change4 0.5s linear 1 alternate;
+}
+#img6{
+    animation: change4 0.5s linear 1 alternate;
+}
+
+
+#img1:hover {
+    border: 10px solid #e665b0;
+    transform: scale(1.5, 1.5);
+}
+
+#img2:hover{
+    border: 10px solid #36ba45;
+    transform: scale(1.5, 1.5);
+}
+#img3:hover{
+    border: 10px solid #74C0FC;
+    transform: scale(1.5, 1.5);
+}
+#img4:hover{
+    border: 10px solid #000000;
+    transform: scale(1.5, 1.5);
+}
+#img5:hover{
+    border: 10px solid #000000;
+    transform: scale(1.5, 1.5);
+}
+#img6:hover{
+    transform: scale(1.5, 1.5);
+    border: 10px solid #000000;
+}
+
+
+i {
+    margin: 3px;
+}
+
+.last {
+    border: 1px  solid white;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    margin: 10px;
+    opacity: 50%;
+    box-shadow: 1px 1px 1px ;
+    }
+
+.other{
+    display: inline-block;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+}
+.last_button1 {
+    background-color: #e665b0;
+}
+.last_button2 {
+    background-color: #36ba45;
+
+}
+.last_button3 {
+    background-color: #74C0FC;
+}
+.last_button4 {
+    background-color: #000000;
+}
+.last_button5 {
+    background-color: white;
+}
+.last_button6 {
+    background-color: #811d60;
+
+}
+
+
+button:active {
+    transform: translateZ(1px); /* 클릭 시 버튼을 아래로 약간 이동하여 누르는 효과를 줍니다. */
+}
+
+.last_button1:active {
+    background-color: #df0383;
+
+}
+.last_button2:active {
+    background-color: #02c018;
+}
+.last_button3:active {
+    background-color: #0592fd;
+}
+.last_button4:active {
+    background-color: #b3aaaa;
+}
+.last_button5:active {
+    background-color: white;
+}
+.last_button6:active {
+    background-color: #811d60;
+}
+
+
+/* 종이 폭죽  */
+  .confetti-container {
+    position: absolute;
+    top: 0;
+    left: 10;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+  }
+
+  .confetti {
+    position: absolute;
+    width: 5px;  /* 폭죽 너비 */
+    height: 15px; /* 폭죽 높이 */
+    background-color: #ffcc00;
+    opacity: 0.8;
+    animation: fall 3s ease infinite, rotate 1s linear infinite;
+    z-index: 10000;
+  }
+
+  @keyframes fall {
+    0% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateY(100vh);
+    }
+  }
+
+  @keyframes rotate {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }

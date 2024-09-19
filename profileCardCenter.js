@@ -14,9 +14,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-
-    // 폭죽 버튼 및 이미지
-    const viewRange = document.getElementsByClassName('v');
     const confettiContainer = document.querySelector('.confetti-container');
     const numConfetti = 10; // 총 폭죽의 개수
 
