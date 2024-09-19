@@ -49,11 +49,7 @@
 ```
 C:.
 ├─img
-├─profile
-│  └─profile
-└─profileCard
-    └─profile
-        └─profile
+└─profile
 ```
 
 ## 5. 트러블 슈팅
