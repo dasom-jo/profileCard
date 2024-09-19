@@ -34,7 +34,7 @@
 - 이미지 클릭시 이미지가 커지며 폭죽이 터짐
 <table>
   <tr>
-    <td>이미지클릭릭</td>
+    <td>이미지클릭</td>
     <td><img src="https://github.com/user-attachments/assets/59f638f5-456d-4340-91d1-a5a3bd1658a5" height="300" style="object-fit: cover;" /></td>
   </tr>
 </table>
